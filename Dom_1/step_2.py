@@ -11,4 +11,4 @@ fullnumber = fullnumber%60
 seconds = fullnumber
 print(f'seconds – {seconds}')
 
-print(f'{hours}:{minutes}:{seconds}')
+print(f'{hours:02}:{minutes:02}:{seconds:02}')
