@@ -14,11 +14,12 @@ class Coat(Clothes):
 
     @razmer_property.setter
     def razmer(self, value):
-        self.V = value + 1
+        if value > 64:
+            self.V = 64
 
     def rashod_calc(self):
         rashod = self.V / 6.5 + 0.5
-        print(rashod)
+        print(f'Расход ткани для производства пальто – {rashod}')
 
 class Suit(Clothes):
     def __init__(self, name, H):
@@ -27,19 +28,19 @@ class Suit(Clothes):
 
     def rashod_calc(self):
         rashod = 2 * self.H + 0.3
-        print(rashod)
+        print(f'Расход ткани для производства костюма – {rashod}')
 
 coat_1 = Coat('Ritter', 54)
+coat_1.rashod_calc()
+
+print()
+
+coat_1.razmer = 100
+print(coat_1.razmer)
 
 coat_1.rashod_calc()
 
 print()
 
-coat_1.razmer = 55
-print(coat_1.razmer)
-
-print()
-
 suit_1 = Suit('Stenser', 6)
-
 suit_1.rashod_calc()

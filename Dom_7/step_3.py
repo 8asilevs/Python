@@ -46,10 +46,10 @@ class Cell:
             print('Недопустимые значения на входе функции')
         elif dlina >= 1:
             stroka = ''
-            if dlina > 1 and dlina <= n:
+            if dlina >= 1 and dlina <= n:
                 for i in range(dlina):
                     stroka += '*'
-            elif dlina > 1 and dlina > n:
+            elif dlina >= 1 and dlina > n:
                 while dlina >= n:
                     for i in range(n):
                         stroka += '*'
@@ -129,3 +129,7 @@ print()
 cell_14.make_order(6)
 print()
 
+
+cell_15 = Cell('*')
+cell_15.make_order(10)
+print()
