@@ -1,27 +1,19 @@
-def summirovanie(*kwargs):
+def summirovanie(list_chisel):
     summa = 0
-    for slagaemoe in kwargs[0]:
+    for slagaemoe in list_chisel:
         summa += int(slagaemoe)
-    return summa
+    print(f'Сумма всех введённых чисел – {summa}')
 
 chisla = input('Введите числа, разделённые пробелом').split(' ')
-if chisla[-1] == '':
-    del chisla[-1]
 
-rezultat = summirovanie(chisla)
-
-print(f'Сумма всех введённых чисел – {rezultat}')
+summirovanie(chisla)
 
 eschyo_chisla = input('Введите ещё числа, разделённые пробелом').split(' ')
-if eschyo_chisla[-1] == '':
-    del eschyo_chisla[-1]
 
 if eschyo_chisla == ['x']:
     pass
 elif eschyo_chisla[-1] == 'x':
     del eschyo_chisla[-1]
-    rezultat = summirovanie(chisla + eschyo_chisla)
-    print(f'Сумма всех введённых чисел – {rezultat}')
+    summirovanie(chisla + eschyo_chisla)
 else:
-    rezultat = summirovanie(chisla + eschyo_chisla)
-    print(f'Сумма всех введённых чисел – {rezultat}')
+    summirovanie(chisla + eschyo_chisla)

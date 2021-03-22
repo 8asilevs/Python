@@ -3,7 +3,7 @@ def my_func(x, y):
     i = 1
     max = -y
     while i <= max:
-        znamenatel = znamenatel*x
+        znamenatel *= x
         i += 1
     return 1/znamenatel
 

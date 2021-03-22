@@ -6,8 +6,8 @@ def int_func(stroka):
         stroka_titled += stroka[i].title()
         stroka_titled += ' '
         i += 1
-    return stroka_titled
+    print(f'Все слова с заглавной буквы – {stroka_titled}')
 
 string = input('Введите строку').split(' ')
 
-print(f'Все слова с заглавной буквы – {int_func(string)}')
+int_func(string)
