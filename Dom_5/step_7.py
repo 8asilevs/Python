@@ -13,9 +13,9 @@ with open('primer_7.txt', 'r') as file:
 
 ch_firm, pribyl_all = 0, 0
 
-for key in dict_1:
-    if dict_1[key] > 0:
-        pribyl_all += dict_1[key]
+for pribyl in dict_1.values():
+    if pribyl > 0:
+        pribyl_all += pribyl
         ch_firm += 1
 
 pribyl_sredn = pribyl_all / ch_firm
